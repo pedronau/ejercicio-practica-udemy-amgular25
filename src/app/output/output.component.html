@@ -1,21 +1,23 @@
     <table>
         <thead>
             <tr>
-                <th>Encabezado 1</th>
-                <th>Encabezado 2</th>
-                <th>Encabezado 3</th>
+                <th>Año</th>
+                <th>Valor inversión</th>
+                <th>Interés anual</th>
+                <th>Interés total</th>
+                <th>Capital invertido</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Dato 1</td>
-                <td>Dato 2</td>
-                <td>Dato 3</td>
-            </tr>
-            <tr>
-                <td>Dato 4</td>
-                <td>Dato 5</td>
-                <td>Dato 6</td>
-            </tr>
+            
+            @for (anio of anios; track $index) {
+                <tr>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 3</td>
+                    <td>Dato 3</td>
+                </tr>
+            }
         </tbody>
     </table>

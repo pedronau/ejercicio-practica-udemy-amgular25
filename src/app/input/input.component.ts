@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Datos } from '../models';
 
 @Component({
   selector: 'app-input',
@@ -11,17 +12,15 @@ import { FormsModule } from '@angular/forms';
 export class InputComponent {
 
   @Output() botonPulsado = new EventEmitter<boolean>();
+  @Output() datosIntroducidos = new EventEmitter<[]>();
 
   inputInversionInicial: number = 0;
   inputAportacionAnual: number = 0;
   inputTasaRetorno: number = 0;
   inputDuracion: number = 0;
 
-  datosIntroducidos() {
-    this.botonPulsado.emit(true);
-  }
-
   calculateInvestmentResults() {
+    this.botonPulsado.emit(true);
     const annualData = [];
     let investmentValue = this.inputInversionInicial;
 
@@ -40,9 +39,8 @@ export class InputComponent {
         totalAmountInvested: this.inputInversionInicial + this.inputAportacionAnual * year,
       });
     }
-  
-    // return annualData;
-    return console.log(annualData);
+
+    return annualData;
   }
 
 }
