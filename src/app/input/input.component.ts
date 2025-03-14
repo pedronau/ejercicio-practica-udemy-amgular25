@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Datos } from '../models';
 
 @Component({
   selector: 'app-input',
@@ -17,10 +18,11 @@ export class InputComponent {
   inputTasaRetorno: number = 0;
   inputDuracion: number = 0;
 
+  datos: Datos[] = []; 
   hayDatos = false;
 
   calculateInvestmentResults() {
-    const annualData = [];
+    this.datos = [];
     let investmentValue = this.inputInversionInicial;
 
     for (let i = 0; i < this.inputDuracion; i++) {
@@ -29,7 +31,7 @@ export class InputComponent {
       investmentValue += interestEarnedInYear + this.inputAportacionAnual;
       const totalInterest =
         investmentValue - this.inputAportacionAnual * year - this.inputInversionInicial;
-      annualData.push({
+        this.datos.push({
         year: year,
         interest: interestEarnedInYear,
         valueEndOfYear: investmentValue,
@@ -40,6 +42,8 @@ export class InputComponent {
     }
     
     this.hayDatos = true;
-    return annualData;
   }
+
+  campo1 = this.datos
+
 }

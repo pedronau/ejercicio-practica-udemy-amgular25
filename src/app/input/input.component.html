@@ -38,15 +38,15 @@
         </thead>
         <tbody>
             
-            <!-- @for (ano of anios; track ano) {  -->
+            @for (dato of datos; track $index) { 
                 <tr>
-                    <td>Dato 1</td>
-                    <td>Dato 2</td>
-                    <td>Dato 3</td>
-                    <td>Dato 3</td>
-                    <td>Dato 3</td>
+                    <td>{{ dato.year }}</td>
+                    <td>{{ dato.interest }}</td>
+                    <td>{{ dato.valueEndOfYear }}</td>
+                    <td>{{ dato.annualInvestment }}</td>
+                    <td>{{ dato.totalInterest }}</td>
                 </tr>
-            <!-- }  -->
+            } 
                
         </tbody>
     </table>
