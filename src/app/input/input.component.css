@@ -1,0 +1,28 @@
+div {
+    background-color: #85bb65 ;
+    width: 30rem;
+    display: grid;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    place-items: center;
+    height: auto;
+}
+
+input {
+    height: 3em;
+    width: 10rem;
+}
+
+button {
+    margin-top: 2em;
+    width: 20rem;
+    height: 2rem;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #6a974f;
+}
