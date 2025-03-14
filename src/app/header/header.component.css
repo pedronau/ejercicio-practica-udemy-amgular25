@@ -1,0 +1,11 @@
+header {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+img {
+    height: 6rem;
+    padding-left: auto;
+}
