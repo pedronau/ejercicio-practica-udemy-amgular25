@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './input.component.css'
 })
 export class InputComponent {
+
+  @Output() botonPulsado = new EventEmitter<boolean>();
+
+  datosIntroducidos() {
+    this.botonPulsado.emit(true);
+  }
 
 }

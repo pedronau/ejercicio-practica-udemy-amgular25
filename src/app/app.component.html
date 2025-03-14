@@ -1,2 +1,7 @@
 <app-header></app-header>
-<app-input></app-input>
+
+<app-input (botonPulsado)="desplegarOutput()"></app-input>
+
+@if (introducedData === true) {
+    <app-output></app-output>
+}
