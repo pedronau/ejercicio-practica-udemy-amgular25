@@ -21,7 +21,33 @@
             </div>
         </div>
     </form>
-        <button (click)="calculateInvestmentResults()">Calcular</button>
-    
+        <button (click)="calculateInvestmentResults()">Calcular</button>   
 </div>
 <p style="display: grid; place-items: center;">Introduce tus datos y pulsa "Calcular"</p>
+
+@if (hayDatos === true) {
+    <table>
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Valor inversión</th>
+                <th>Interés anual</th>
+                <th>Interés total</th>
+                <th>Capital invertido</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <!-- @for (ano of anios; track ano) {  -->
+                <tr>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 3</td>
+                    <td>Dato 3</td>
+                </tr>
+            <!-- }  -->
+               
+        </tbody>
+    </table>
+}
