@@ -1,24 +1,27 @@
 <div style="padding-bottom: 2rem;">
-    <div style="display: flex;">
-        <div>
-            <p>Inversión inicial</p>
-            <input type="text">
+    <form>
+        <div style="display: flex;">
+            <div>
+                <p>Inversión inicial</p>
+                <input type="number" [(ngModel)]="inputInversionInicial" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div>
+                <p>Aportación anual</p>
+                <input type="number" [(ngModel)]="inputAportacionAnual" [ngModelOptions]="{standalone: true}">
+            </div>
         </div>
-        <div>
-            <p>Aportación anual</p>
-            <input type="text">
+        <div style="display: flex;">
+            <div>
+                <p>Tasa de retorno</p>
+                <input type="number" [(ngModel)]="inputTasaRetorno" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div>
+                <p>Duración</p>
+                <input type="number" [(ngModel)]="inputDuracion" [ngModelOptions]="{standalone: true}">
+            </div>
         </div>
-    </div>
-    <div style="display: flex;">
-        <div>
-            <p>Tasa de retorno</p>
-            <input type="text">
-        </div>
-        <div>
-            <p>Duración</p>
-            <input type="text">
-        </div>
-    </div>
-    <button (click)="datosIntroducidos()">Calcular</button>
+    </form>
+        <button (click)="calculateInvestmentResults()">Calcular</button>
+    
 </div>
 <p style="display: grid; place-items: center;">Introduce tus datos y pulsa "Calcular"</p>
